@@ -1,13 +1,16 @@
-import React from 'react'
+import React from "react";
+import "./Navbar.scss";
+import SearchBox from "../SearchBox/SearchBox";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const { beersArray } = props;
+
+  
   return (
-    <div>Navbar</div>
+    <div className="navbar">
+      <SearchBox />
+    </div>
+  );
+};
 
-
-    //search 
-//by 3 possible filters
-  )
-}
-
-export default Navbar
+export default Navbar;
