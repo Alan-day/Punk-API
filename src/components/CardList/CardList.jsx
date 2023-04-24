@@ -1,13 +1,14 @@
 import React from "react";
 import Card from "../Card/Card";
-import beers from "../../data/beers";
+
 import "./CardList.scss";
 
-const CardList = () => {
-  const cardList = beers.map((card) => {
+const CardList = (props) => {
+  const { beerList } = props;
+  const cardList = beerList.map((card) => {
     return (
       <Card
-        source= {card.source}
+        source={card.image_url}
         name={card.name}
         description={card.description}
       />
