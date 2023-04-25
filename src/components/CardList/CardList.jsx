@@ -4,8 +4,9 @@ import Card from "../Card/Card";
 import "./CardList.scss";
 
 const CardList = (props) => {
-  const { beerList } = props;
-  const cardList = beerList.map((card) => {
+  const { beerCards } = props;
+
+  const cardList = beerCards.map((card) => {
     return (
       <Card
         source={card.image_url}

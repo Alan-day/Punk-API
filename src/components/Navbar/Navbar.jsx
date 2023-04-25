@@ -1,14 +1,20 @@
-import React from "react";
+import { React, useState } from "react";
 import "./Navbar.scss";
-import beers from "../../data/beers";
+
 import SearchBox from "../SearchBox/SearchBox";
-import ExploreBeers from "../ExploreBeers/ExploreBeers";
+
 const Navbar = (props) => {
-  const { beersArray } = props;
+  const { handleInput, searchTerm } = props;
 
   return (
     <div className="navbar">
-      <ExploreBeers beerList={beers} />
+      <h1>Search for beer</h1>
+      <SearchBox handleInput={handleInput} searchTerms={searchTerm} />
+      <label>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+        <input type="checkbox"></input>
+      </label>
     </div>
   );
 };
