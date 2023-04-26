@@ -18,21 +18,14 @@ function App() {
     const data = await result.json();
     setBeerSelection(data);
   };
-  console.log(beerSelection);
-
-  const handleBeerSelection = (event) => {
-    setBeerSelection(event.target.value);
-  };
 
   useEffect((beerSelection) => {
     getBeerSelection(beerSelection);
   }, []); //listens to change
 
-  const handleAbv = () => {
-    if (abv == true) {
-      setAbv(false);
-    } else {
-      setAbv(true);
+  const handleAbv = (event) => {
+    if (event.target.value == "abv") {
+      setBeerSelection(filteredAbv);
     }
   };
 
@@ -46,6 +39,14 @@ function App() {
     return beerToLower.includes(searchTerm);
   });
 
+  const filteredAbv = beerSelection.filter((beer) => {
+    const beerToLower = beer.name.toLowerCase();
+
+    return beerToLower.includes(searchTerm && beer.abv > 6);
+  });
+
+  console.log("this is abv" + filteredAbv);
+
   return (
     <div className="App">
       <section className="explore">
@@ -56,7 +57,7 @@ function App() {
         />
         <h2 className="explore__heading">Explore Beers</h2>
 
-        <CardList beerCards={filteredBeers} onChange={handleBeerSelection} />
+        <CardList beerCards={filteredBeers} />
       </section>
     </div>
   );

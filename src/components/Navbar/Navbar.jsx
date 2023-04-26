@@ -11,16 +11,16 @@ const Navbar = (props) => {
       <SearchBox handleInput={handleInput} searchTerms={searchTerm} />
 
       <label>
-        filter 1 <input type="checkbox" onChange={setAbv}></input>
+        High ABV <input type="checkbox" value="abv" onChange={setAbv}></input>
       </label>
       <label>
-        filter 2<input type="checkbox" onChange={setClassic}></input>
+        Classic Range <input type="checkbox" onChange={setClassic}></input>
       </label>
 
       <label>
-        filter 3 <input type="checkbox" onChange={setAcidic}></input>
+        Acidic <input type="checkbox" onChange={setAcidic}></input>
       </label>
-    </div> // High ABV(>6.0%) Classic Range Acidic(ph < 4)
+    </div>
   );
 };
 
