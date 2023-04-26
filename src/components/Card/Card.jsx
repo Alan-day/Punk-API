@@ -2,7 +2,7 @@ import React from "react";
 import "./Card.scss";
 
 const Card = (props) => {
-  const { name, source, description } = props;
+  const { name, source, description, abv, ph } = props;
 
   console.log(source);
   return (
@@ -10,6 +10,8 @@ const Card = (props) => {
       <img src={`${source}`} />
       <h1>{name}</h1>
       <p> {description}</p>
+      <p>{abv}</p>
+      <p>{ph}</p>
     </div>
   );
 };

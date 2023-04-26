@@ -11,5 +11,3 @@ const drinks = [
 sortDrinkByPrice = (drinks) => {
   return drinks.sort((a, b) => a.price - b.price);
 };
-
-console.log(sortDrinkByPrice(drinks));

@@ -12,6 +12,8 @@ const CardList = (props) => {
         source={card.image_url}
         name={card.name}
         description={card.description}
+        abv={card.abv}
+        ph = {card.ph}
       />
     );
   });

@@ -14,11 +14,13 @@ const Navbar = (props) => {
         High ABV <input type="checkbox" value="abv" onChange={setAbv}></input>
       </label>
       <label>
-        Classic Range <input type="checkbox" onChange={setClassic}></input>
+        Classic Range
+        <input type="checkbox" value="classic" onChange={setClassic}></input>
       </label>
 
       <label>
-        Acidic <input type="checkbox" onChange={setAcidic}></input>
+        Acidic
+        <input type="checkbox" value="acidic" onChange={setAcidic}></input>
       </label>
     </div>
   );

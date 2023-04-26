@@ -7,9 +7,6 @@ import beers from "./data/beers";
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const [abv, setAbv] = useState(false);
-  const [classic, setClassic] = useState(false);
-  const [acidic, setAcidic] = useState(false);
   const [beerSelection, setBeerSelection] = useState(beers);
 
   const getBeerSelection = async () => {
@@ -26,7 +23,21 @@ function App() {
   const handleAbv = (event) => {
     if (event.target.value == "abv") {
       setBeerSelection(filteredAbv);
-    }
+    } else {
+      
+    } // error, sets beerSelection to filteredAbv permanently
+  };
+
+  const handleClassic = (event) => {
+    if (event.target.value == "classic") {
+      setBeerSelection(filteredClassicRange);
+    } // error, sets beerSelection to filteredClassic permanently
+  };
+
+  const handleAcidic = (event) => {
+    if (event.target.value == "acidic") {
+      setBeerSelection(filteredAcidic);
+    } // error, sets beerSelection to filteredAcidic permanently
   };
 
   const handleInput = (event) => {
@@ -42,10 +53,20 @@ function App() {
   const filteredAbv = beerSelection.filter((beer) => {
     const beerToLower = beer.name.toLowerCase();
 
-    return beerToLower.includes(searchTerm && beer.abv > 6);
+    return beerToLower.includes(searchTerm) && beer.abv > 6;
   });
 
-  console.log("this is abv" + filteredAbv);
+  const filteredClassicRange = beerSelection.filter((beer) => {
+    const beerToLower = beer.name.toLowerCase();
+
+    return beerToLower.includes(searchTerm) && beer.abv > 6;
+  });
+
+  const filteredAcidic = beerSelection.filter((beer) => {
+    const beerToLower = beer.name.toLowerCase();
+
+    return beerToLower.includes(searchTerm) && beer.ph < 4;
+  });
 
   return (
     <div className="App">
@@ -54,6 +75,8 @@ function App() {
           searchTerm={searchTerm}
           handleInput={handleInput}
           setAbv={handleAbv}
+          setClassic={handleClassic}
+          setAcidic={handleAcidic}
         />
         <h2 className="explore__heading">Explore Beers</h2>
 
