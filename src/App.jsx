@@ -52,7 +52,6 @@ function App() {
     }
   };
   const handleAbv = (event) => {
-    console.log(event);
     if (event.target.value == "abv" && event.target.checked == true) {
       setBeerSelection(filteredAbv);
     } else if (event.target.value == "abv" && event.target.checked == false) {
@@ -61,15 +60,25 @@ function App() {
   };
 
   const handleClassic = (event) => {
-    if (event.target.value == "classic") {
+    if (event.target.value == "classic" && event.target.checked == true) {
       setBeerSelection(filteredClassicRange);
-    } // error, sets beerSelection to filteredClassic permanently
+    } else if (
+      event.target.value == "classic" &&
+      event.target.checked == false
+    ) {
+      setBeerSelection(beers);
+    }
   };
 
   const handleAcidic = (event) => {
-    if (event.target.value == "acidic") {
+    if (event.target.value == "acidic" && event.target.checked == true) {
       setBeerSelection(filteredAcidic);
-    } // error, sets beerSelection to filteredAcidic permanently
+    } else if (
+      event.target.value == "acidic" &&
+      event.target.checked == false
+    ) {
+      setBeerSelection(beers);
+    }
   };
 
   const handleInput = (event) => {
@@ -98,7 +107,7 @@ function App() {
   const filteredAcidic = beerSelection.filter((beer) => {
     const beerToLower = beer.name.toLowerCase();
 
-    return beerToLower.includes(searchTerm) && beer.ph < 4;
+    return beerToLower.includes(searchTerm) && beer.ph < 4 && beer.ph != null;
   });
 
   return (
@@ -108,8 +117,8 @@ function App() {
           searchTerm={searchTerm}
           handleInput={handleInput}
           setAbv={handleAbv}
-          setClassic={getCheckedValues}
-          setAcidic={getCheckedValues}
+          setClassic={handleClassic}
+          setAcidic={handleAcidic}
         />
 
         <h2 className="app__heading">Explore Beers</h2>
