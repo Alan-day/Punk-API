@@ -111,7 +111,9 @@ function App() {
   });
 
   return (
+    
     <div className="App">
+     
       <section className="explore_items">
         <Navbar
           searchTerm={searchTerm}

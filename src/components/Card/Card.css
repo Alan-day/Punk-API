@@ -1,13 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans:wght@300&family=Playfair+Display&family=Sigmar&display=swap");
 img {
   width: 60px;
-  height: 140px;
+  height: 180px;
 }
 
 .beer-card {
+  font-size: 14px;
   margin: 10px;
-  padding: 10px;
+  padding: 15px;
   background-color: darkgrey;
   border-radius: 20px;
-  height: 500px;
+  height: 550px;
   width: 400px;
+}
+.beer-card__name {
+  font-family: Sigmar, sans-serif;
+}
+.beer-card__description {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Caveat, sans-serif;
+}
+.beer-card__parameters {
+  font-family: Playfair Display, sans-serif;
 }/*# sourceMappingURL=Card.css.map */

@@ -4,17 +4,8 @@
   margin-top: 50px;
   display: grid;
   grid-row-end: auto;
-  grid-template-areas: "navbar cardlist";
   grid-template-columns: 1fr 1fr;
   background-color: antiquewhite;
-}
-
-.navbar {
-  grid-area: navbar;
-}
-
-.explore {
-  grid-area: cardlist;
 }
 
 .explore__heading {

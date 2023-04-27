@@ -1,13 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans:wght@300&family=Playfair+Display&family=Sigmar&display=swap");
+
+$primary-font: Sigmar, sans-serif;
+$secondary-font: Caveat, sans-serif;
+$parameters-font: Playfair Display, sans-serif;
 img {
   width: 60px;
-  height: 140px;
+  height: 180px;
 }
 
 .beer-card {
+  font-size: 14px;
   margin: 10px;
-  padding: 10px;
+  padding: 15px;
   background-color: darkgrey;
   border-radius: 20px;
-  height: 500px;
+  height: 550px;
   width: 400px;
+
+  &__name {
+    font-family: $primary-font;
+  }
+
+  &__description {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: $secondary-font;
+  }
+
+  &__parameters {
+    font-family: $parameters-font;
+  }
 }

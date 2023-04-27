@@ -1,5 +1,4 @@
 .App {
-  
   text-align: center;
 
   padding: 0;
@@ -7,17 +6,11 @@
 
   display: grid;
   grid-row-end: auto;
-  grid-template-areas: "navbar cardlist";
+
   grid-template-columns: 1fr 1fr;
   background-color: antiquewhite;
 }
 
-.navbar {
-  grid-area: navbar;
-}
-.explore {
-  grid-area: cardlist;
-}
 .explore__heading {
   width: 99vh;
   display: flex;
