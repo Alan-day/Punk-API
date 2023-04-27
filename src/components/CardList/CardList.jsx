@@ -13,7 +13,8 @@ const CardList = (props) => {
         name={card.name}
         description={card.description}
         abv={card.abv}
-        ph = {card.ph}
+        ph={card.ph}
+        firstBrewed={card.first_brewed}
       />
     );
   });

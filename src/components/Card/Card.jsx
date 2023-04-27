@@ -2,7 +2,7 @@ import React from "react";
 import "./Card.scss";
 
 const Card = (props) => {
-  const { name, source, description, abv, ph } = props;
+  const { name, source, description, abv, ph, firstBrewed } = props;
 
   console.log(source);
   return (
@@ -12,6 +12,7 @@ const Card = (props) => {
       <p> {description}</p>
       <p>{abv}</p>
       <p>{ph}</p>
+      <p>{firstBrewed}</p>
     </div>
   );
 };
