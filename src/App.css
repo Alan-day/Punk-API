@@ -1,10 +1,7 @@
 .App {
-  
   text-align: center;
-
   padding: 0;
   margin-top: 50px;
-
   display: grid;
   grid-row-end: auto;
   grid-template-areas: "navbar cardlist";
@@ -15,11 +12,13 @@
 .navbar {
   grid-area: navbar;
 }
+
 .explore {
   grid-area: cardlist;
 }
+
 .explore__heading {
   width: 99vh;
   display: flex;
   justify-content: end;
-}
+}/*# sourceMappingURL=App.css.map */

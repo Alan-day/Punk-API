@@ -7,7 +7,7 @@ const Navbar = (props) => {
 
   return (
     <div className="navbar">
-      <h1>Search for beer</h1>
+      <h1 className="navbar__heading">Search for beer</h1>
       <SearchBox handleInput={handleInput} searchTerms={searchTerm} />
 
       <label>
@@ -27,3 +27,21 @@ const Navbar = (props) => {
 };
 
 export default Navbar;
+
+// if (
+//   event.target.checked == true &&
+//   (checkedValues.highAbv == false) &
+//     (checkedValues.classic == false) &
+//     (checkedValues.acidic == false)
+// ) {
+//   setCheckedValues(checkedValues.highAbv == true);
+//   setBeerSelection(filteredAbv);
+// } else if (
+//   event.target.checked == false &&
+//   (checkedValues.highAbv == true) &
+//     (checkedValues.classic == false) &
+//     (checkedValues.acidic == false)
+// ) {
+//   setCheckedValues(checkedValues.highAbv == false);
+//   setBeerSelection(beers);
+// }

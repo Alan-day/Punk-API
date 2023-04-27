@@ -1,6 +1,7 @@
 .search-box {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   &__label {
     font-size: 20px;

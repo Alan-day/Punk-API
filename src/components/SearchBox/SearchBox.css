@@ -1,0 +1,26 @@
+.search-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.search-box__label {
+  font-size: 20px;
+}
+.search-box__input {
+  margin: 20px 10px;
+  padding: 10px 80px;
+  font-size: 18px;
+  border: 2px gray solid;
+  border-radius: 15px;
+  color: black;
+}
+.search-box__input:focus {
+  border: 2px blue solid;
+  outline: none;
+}
+
+@media screen and (min-width: 992px) {
+  .search-box__input {
+    width: calc(50% - 50px);
+  }
+}/*# sourceMappingURL=SearchBox.css.map */

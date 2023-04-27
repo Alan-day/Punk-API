@@ -28,8 +28,29 @@ function App() {
     getBeerSelection(beerSelection);
   }, []); //listens to change
 
-  const getCheckedValues = () => {};
-
+  const getCheckedValues = (event) => {
+    if (event.target.checked) {
+      if (event.target.value == "abv") {
+        setCheckedValues.highAbv(true);
+      }
+      if (event.target.value == "classic") {
+        setCheckedValues.classic(true);
+      }
+      if (event.target.value == "acidic") {
+        setCheckedValues.acidic(true);
+      }
+    } else {
+      if (event.target.value == "abv") {
+        setCheckedValues.highAbv(false);
+      }
+      if (event.target.value == "classic") {
+        setCheckedValues.classic(false);
+      }
+      if (event.target.value == "acidic") {
+        setCheckedValues.acidic(false);
+      }
+    }
+  };
   const handleAbv = (event) => {
     console.log(event);
     if (event.target.value == "abv" && event.target.checked == true) {
@@ -82,15 +103,16 @@ function App() {
 
   return (
     <div className="App">
-      <section className="explore">
+      <section className="explore_items">
         <Navbar
           searchTerm={searchTerm}
           handleInput={handleInput}
-          setAbv={getCheckedValues}
+          setAbv={handleAbv}
           setClassic={getCheckedValues}
           setAcidic={getCheckedValues}
         />
-        <h2 className="explore__heading">Explore Beers</h2>
+
+        <h2 className="app__heading">Explore Beers</h2>
 
         <CardList beerCards={filteredBeers} />
       </section>
