@@ -1,5 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans:wght@300&family=Playfair+Display&family=Sigmar&display=swap");
+
+$primary-font: Sigmar, sans-serif;
+$secondary-font: Caveat, sans-serif;
+$parameters-font: Playfair Display, sans-serif;
+
 .navbar {
-  margin-top: 100px;
+  margin-top: 35px;
   margin-left: 20px;
 
   border-radius: 20px;
@@ -11,8 +17,14 @@
   align-items: center;
   height: 100vh;
   width: 15%;
-
+  
+  label {
+    font-family: $parameters-font;
+    font-size: 18px;
+    font-weight: bold;
+  }
   &__heading {
     font-size: 28px;
+    font-family: $parameters-font;
   }
 }

@@ -11,7 +11,8 @@ const Navbar = (props) => {
       <SearchBox handleInput={handleInput} searchTerms={searchTerm} />
 
       <label>
-        High ABV <input type="checkbox" value="abv" onChange={setAbv}></input>
+        High ABV (more than 6%)
+        <input type="checkbox" value="abv" onChange={setAbv}></input>
       </label>
       <label>
         Classic Range
