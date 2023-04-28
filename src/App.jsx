@@ -111,10 +111,10 @@ function App() {
   });
 
   return (
-    
     <div className="App">
-     
       <section className="explore_items">
+        <h2 className="app__heading">Punk API</h2>
+
         <Navbar
           searchTerm={searchTerm}
           handleInput={handleInput}
@@ -123,10 +123,9 @@ function App() {
           setAcidic={handleAcidic}
         />
 
-        <h2 className="app__heading">Explore Beers</h2>
-
         <CardList beerCards={filteredBeers} />
       </section>
+      <h2 className="app__heading">Explore Beers</h2>
     </div>
   );
 }

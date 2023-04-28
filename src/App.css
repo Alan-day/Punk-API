@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans:wght@300&family=Playfair+Display&family=Sigmar&display=swap");
 html {
   background-color: #203031;
 }
@@ -9,11 +10,12 @@ html {
   display: grid;
   grid-row-end: auto;
   grid-template-columns: 1fr 1fr;
-  background-color: #0090C1;
+  background-color: #0090c1;
 }
 
-.explore__heading {
+.app__heading {
   width: 99vh;
   display: flex;
-  justify-content: end;
+  justify-content: center;
+  font-family: Sigmar, sans-serif;
 }/*# sourceMappingURL=App.css.map */
